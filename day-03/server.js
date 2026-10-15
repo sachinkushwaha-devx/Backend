@@ -1,17 +1,22 @@
-const express = require('express');
+const express = require("express")
 
 
-const app = express();
-
+const app = express()
 app.use(express.json())
 
 const notes = []
 
-app.post('/notes', (req, res)=> {
+app.post("/notes", (req, res) => {
     console.log(req.body)
-    res.send("note create")
+
+    notes.push(req.body)
+    res.send("notes created successfully")
 })
 
+app.get("/notes", (req, res)=> {
+    res.send(notes)
+})
+ 
 app.listen(3000, ()=>{
     console.log("server is running on port 3000")
 })
