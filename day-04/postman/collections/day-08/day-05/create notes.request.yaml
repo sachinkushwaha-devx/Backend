@@ -1,0 +1,13 @@
+$kind: http-request
+url: http://localhost:3000:/notes
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"titel\": \"test title 2\",\r
+
+    \    \"description\": \"test description2\"\r
+
+    }"
+order: 1000
