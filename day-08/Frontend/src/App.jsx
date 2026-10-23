@@ -38,6 +38,15 @@ const App = () => {
     })
   }
 
+  function handleDeleteNote(noteId){
+    axios.delete("http://localhost:3000/api/notes/"+noteId)
+    .then(res=>{
+      console.log(res.data)
+      fetchNotes()
+    })
+
+  }
+
   return (
   
     <>
@@ -54,6 +63,9 @@ const App = () => {
         return <div className="note">
         <h1>{note.title}</h1>
         <p> {note.description} </p>
+        <button onClick={()=>{
+          handleDeleteNote(note._id)
+        }}>delete note</button>
       </div>
         })
       }
