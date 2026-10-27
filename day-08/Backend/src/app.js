@@ -9,7 +9,7 @@ const app = express()
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static("./public"))
+app.use(express.static("./src"))
 
 app.post("/api/notes", async (req, res)=>{
     const {title, description } = req.body
@@ -56,7 +56,7 @@ app.patch("/api/notes/:id", async (req, res)=>{
      })
 })
 
-console.log(__dirname)
+
 
 
 app.use("*name", (req,res)=>{

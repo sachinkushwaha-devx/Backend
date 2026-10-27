@@ -47,6 +47,10 @@ const App = () => {
 
   }
 
+ 
+
+
+
   return (
   
     <>
@@ -54,6 +58,7 @@ const App = () => {
     <input name="title" type="text" placeholder="Enter title" />
     <input name="description" type="text" placeholder="Enter description" />
     <button>Create note</button>
+    
 
   </form>
 
@@ -66,10 +71,11 @@ const App = () => {
         <button onClick={()=>{
           handleDeleteNote(note._id)
         }}>delete note</button>
+         
       </div>
         })
       }
-    
+     
     </div>
      </>
   )
