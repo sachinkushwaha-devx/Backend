@@ -1,7 +1,4 @@
 $kind: http-request
-url: http://localhost:3000:/dfsdk
+url: ""
 method: GET
-body:
-  type: json
-  content: ""
 order: 5000
